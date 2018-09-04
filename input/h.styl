@@ -1,0 +1,462 @@
+.clear
+	zoom 1
+
+.clear:after
+	display block
+	clear both
+	content ''
+
+c_green = #679733
+c_black = #3a4354
+c_brown = #787d87
+c_gray = #a5a9ac
+
+body
+	background #f8f7f7
+
+.mobile-wrap
+	position relative
+
+.public-header
+	position relative
+	background c_green
+	color #ffffff
+	text-align center
+	line-height 100px
+
+	&.bgfff
+		background #f8f7f7
+		color #5e646a
+
+		.back
+			background-image url('../img/3af7b440fd8d3c594b3225daa49d123e-18+32.png')
+
+	h1
+		font-weight bold
+		font-size 30px
+
+	.control
+		position absolute
+		top 0
+		bottom 0
+
+	.left
+		left 50px
+
+	.right
+		right 50px
+
+	.back
+		display block
+		width 30px
+		height 100%
+		background url('../img/fd60b36157fca39f2dbdfd5dab5d7fd6-18+32.png') center center / 18px auto no-repeat
+
+.date-select-container
+	background #ffffff
+
+	div
+		margin 0
+
+	.week
+		display flex
+		border-bottom 1px solid c_gray
+		color c_black
+		font-size 22px
+		line-height 65px
+
+		span
+			flex 1
+			text-align center
+
+		.c-green
+			color c_green
+
+	.date-container
+		display flex
+		justify-content center
+		align-items center
+		height 72px
+		border-bottom 1px solid c_gray
+		color c_black
+		font-size 32px
+		line-height 72px
+
+		.date
+			padding 0 70px
+
+		.arrow-left, .arrow-right
+			width 40px
+			height 100%
+			background url('../img/f9070e3b046efa05486c5ecf0fd857f6-13+24.png') center center no-repeat
+			background-size 13px auto
+
+		.arrow-right
+			background-image url('../img/5fc5dee1595bc1965463a3b649352306-13+24.png')
+
+	.day-container
+		.row
+			display flex
+			flex-wrap wrap
+			border-bottom 1px solid c_gray
+			text-align center
+
+			.day
+				flex 1
+				padding 18px 0
+				&.is-jia
+					position relative
+					&:after
+						content '假'
+						position absolute
+						top 10px
+						left 0
+						right 0
+						text-align center
+						font-size 16px
+						color orange
+				&.is-disbled
+					span
+						color c_brown
+						font-weight bold
+
+				&.is-select
+					span
+						color c_black
+						font-weight normal
+
+				&.select_date
+					span
+						background c_green
+						color #ffffff
+						font-weight bold
+						font-weight normal
+
+				span
+					display block
+					margin 0 auto
+					width 74px
+					height 74px
+					border-radius 50%
+					color c_black
+					font-weight normal
+					font-size 30px
+					line-height 74px
+
+.date-select-block
+	padding-bottom 20px
+	background #f3f4f4
+
+	.p40-0
+		padding 40px 0
+
+	.button
+		display block
+		margin 0 auto
+		width 426px
+		height 92px
+		background url('../img/61f110249082324c1dc1c44cba1fe8f6-426+93.png') center center / 426px no-repeat
+		color #ffffff
+		text-align center
+		font-size 36px
+		line-height 92px
+
+	.tips
+		margin 0 auto 20px
+		padding 40px
+		width 650px
+		border-radius 10px
+		background #ffffff
+		line-height 2
+
+		h3
+			color #5e646a
+			font-weight bold
+			font-size 30px
+
+		p
+			color #838c94
+			font-size 18px
+
+.yuyue
+	div
+		margin 0
+
+	.option
+		padding 0 50px
+
+		.label
+			padding-top 20px
+			padding-left 40px
+			color #838c94
+			font-size 24px
+			line-height 56px
+
+		.df
+			display flex
+			justify-content space-between
+			h2
+				width 5em
+				overflow hidden
+				text-overflow ellipsis
+				white-space nowrap
+			.item
+				position relative
+				display flex
+				justify-content center
+				align-items center
+				width 320px
+				height 150px
+				background #4fa8b8
+				color #ffffff
+				font-weight bold
+				font-size 26px
+
+				&:hover, &.active
+					&:after, &:before
+						opacity 1
+
+				&:after
+					position absolute
+					top 0
+					right 0
+					bottom 0
+					left 0
+					border 5px solid #679732
+					content ''
+					opacity 0
+					transition 0.3s
+
+				&:before
+					position absolute
+					right 20px
+					bottom 15px
+					width 50px
+					height 50px
+					border-radius 50%
+					background #6f9f37 url('../img/5d66fcc8df5f5839b5680d2e5e0fc2a6-30+23.png') center center / 30px auto no-repeat
+					content ''
+					opacity 0
+					transition 0.3s
+
+				img
+					display block
+					margin-left 20px
+					width 92px
+
+			.item-2
+				background #b1c358
+
+				img
+					width 120px
+
+	.content
+		.input
+			padding 0 40px
+			width 100%
+			height 100px
+			background #fff url('../img/325142d34a9ce9fa8d10dee9ee89b4d0-26+14.png') right 30px center / 26px auto no-repeat
+			color #5e646a
+			font-size 24px
+			appearance none
+
+		.time
+			background-image url('../img/67fa82b4f98a0f66935ae31b0be7aafa-34+34.png')
+
+	.p40-0
+		padding 80px 0
+
+	.button
+		display block
+		margin 0 auto
+		width 426px
+		height 92px
+		background url('../img/61f110249082324c1dc1c44cba1fe8f6-426+93.png') center center / 426px no-repeat
+		color #ffffff
+		text-align center
+		font-size 36px
+		line-height 92px
+
+.no-found
+	width 100%
+	height 100vh
+	background #fff url('../img/e31d451b49003164ed6d66d5feb2dda4-750+1206.jpg') center center / 750px auto no-repeat
+
+.login-block
+	width 100%
+	height 100vh
+	background #679732
+
+	div
+		margin 0
+
+	.p220-0-90
+		padding 220px 0 90px
+
+	.brand
+		display block
+		margin 0 auto auto
+		width 160px
+
+		img
+			display block
+			width 100%
+
+	.df
+		display flex
+		justify-content space-between
+		align-items center
+
+	.row
+		margin 0 90px
+		padding 30px 0 0
+		border-bottom 1px solid #fff
+
+		&.bdn
+			border none
+
+		input
+			padding-left 76px
+			width 100%
+			height 96px
+			background url('../img/6f9c5eec4e52b53571336758e00ec6eb-27+38.png') 16px center / 27px no-repeat
+			color #ffffff
+			font-size 26px
+
+			&::placeholder
+				color #ffffff
+
+		.code
+			width 365px
+			background-image url('../img/e255aefad9f569e5bf184e19ce48cb2a-36+36.png')
+			background-position 10px center
+			background-size 36px auto
+
+		.send
+			width 157px
+			height 60px
+			border 1px solid #ffffff
+			border-radius 30px
+			color #ffffff
+			text-align center
+			font-size 20px
+			line-height 60px
+
+		.button
+			display block
+			width 100%
+			height 102px
+			border-radius 51px
+			background #fff
+			color #679732
+			font-size 38px
+
+	.pt60
+		padding-top 60px
+
+.main-block
+	.public-header
+		overflow hidden
+		height 278px
+		background url('../img/2cffc59a897a787d15d719dee1481a88-750+278.png') center center / 100% auto no-repeat
+
+		.brand
+			display block
+			margin 45px auto 25px
+			width 110px
+
+			img
+				display block
+				width 100%
+
+		h2
+			color #ffffff
+			text-align center
+			font-size 16px
+			line-height 1
+
+	.menu
+		padding-top 20px
+
+		.item
+			display block
+			background #ffffff url('../img/549315a4191fd923e0b8f9db8e37958a-16+30.png') right 90px center / 16px auto no-repeat
+
+			&+.item
+				border-top 1px solid #edeef0
+
+			a
+				display block
+				padding-left 164px
+				width 100%
+				height 100px
+				background url('../img/63dc9035036dbe1faf9090a94e5a661a-24+34.png') 92px center / 24px auto no-repeat
+				color #5e646a
+				font-size 30px
+				line-height 100px
+
+			.a2
+				background-image url('../img/00a7649bd03d53545a34ba4db5f98186-35+35.png')
+				background-position 88px auto
+				background-size 35px auto
+
+.footer-menu
+	position fixed
+	right 0
+	bottom 0
+	left 0
+	display flex
+	height 101px
+	border-top 1px solid #dfdfdf
+
+	div
+		margin 0
+
+	.item
+		position relative
+		display block
+		display flex
+		flex 1
+		flex-direction column
+		justify-content center
+		align-items center
+		color #a5a9ac
+		text-align center
+		font-size 20px
+
+		&:hover,
+		&.active
+			.pic
+				background-image url('../img/57a88e2f7f0664ec5ddf6cb81db8ff02-39+44.png')
+			h3
+				color #679732
+
+		.pic
+			width 50px
+			height 50px
+			background url('../img/9abf326eb3442b18c4304ddafe3bd033-39+43.png') center bottom / 39px auto no-repeat
+
+		h3
+			padding-top 10px
+			line-height 1
+
+	.item-2
+		&:after
+			position absolute
+			top 10%
+			bottom 10%
+			left 0
+			width 1px
+			background #dfdfdf
+			content ''
+		&:hover,
+		&.active
+			.pic
+				background-image url('../img/1d5f443f1695461872c77ae892ddd3aa-53+46.png')
+		.pic
+			background-image url('../img/dc2f90059af5cea6db803986828d3b58-50+43.png')
+			background-size 50px auto
+
+/*
+dasdad
+*/

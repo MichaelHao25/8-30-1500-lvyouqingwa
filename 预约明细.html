@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+
+<head design-width="750">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>Demo</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <!--重置样式-->
+    <link rel="stylesheet" href="css/style.css" />
+    <!--页面样式-->
+    <link rel="stylesheet" href="css/common.css" />
+    <!--常用样式库-->
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <!--CSS3动画库-->
+    <link rel="stylesheet" href="css/data.css">
+    <link rel="stylesheet" href="css/h.css">
+    <script src="js/auto-size.js"></script>
+    <!--设置字体大小-->
+</head>
+
+<body>
+    <div class="mobile-wrap center">
+        <header class="public-header bgfff">
+            <div class="control left">
+                <a href="#" class="back"></a>
+            </div>
+            <h1>预约信息</h1>
+            <div class="control right"></div>
+        </header>
+        <main class="main">
+            <form action="?">
+                <div class="yuyue">
+                    <div class="option">
+                        <div class="label">请选择所住项目</div>
+                        <div class="df">
+                            <div class="item item-1 active" data-name="a">
+                                <h2>UTK公寓</h2>
+                                <img src="img/3fb002978c0ea263ec9f1801041857a8-93+94.png" alt="">
+                            </div>
+                            <div class="item item-2" data-name="b">
+                                <h2>UTN公寓</h2>
+                                <img src="img/804833e53c6e4fdf80adc6048fd43eef-121+82.png" alt="">
+                            </div>
+                        </div>
+                        <input type="hidden" value="" class="project-input">
+                    </div>
+                    <div class="option">
+                        <div class="label">房间数</div>
+                        <div class="content">
+                            <select name="" id="" class="input">
+                                <option value="">请选择天数</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="option">
+                        <div class="label">天数</div>
+                        <div class="content">
+                            <select name="" id="" class="input">
+                                <option value="">请选择天数</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="option">
+                        <div class="label">入住时间</div>
+                        <div class="content">
+                            <input type="text" placeholder="请选择入住时间" class="input time">
+                        </div>
+                    </div>
+                    <div class="p40-0">
+                        <button class="button">提交预约</button>
+                    </div>
+                </div>
+            </form>
+        </main>
+
+    </div>
+    <!--mobile_wrap-->
+
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <!--jQ库-->
+    <script src="js/swiper-4.2.0.min.js"></script>
+    <!--轮播库-->
+    <script src="js/MobEpp-1.1.1.js"></script>
+    <!--封装函数-->
+    <script src="js/data-select.js"></script>
+    <script>
+        $('.yuyue .option .df .item').on('click',function(e) {
+            e.preventDefault();
+            $(this).addClass('active').siblings().removeClass('active');
+            $('.yuyue .option .project-input').val($(this).attr('data-name'))
+        })
+    </script>
+</body>
+
+</html>

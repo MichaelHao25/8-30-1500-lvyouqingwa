@@ -1,0 +1,268 @@
+.data-range {
+    position: absolute;
+    width: 6.06rem;
+    max-width: 75%;
+    box-shadow: 0 0.02rem 0.08rem 0 rgba(0,0,0,0.15);
+    border-radius: 0.12rem;
+    background: #fff;
+  }
+  @media (max-width: 1100px) {
+    .data-range {
+      top: 0 !important;
+      bottom: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      width: 100%;
+      max-width: 100%;
+      border-radius: 0;
+      overflow: scroll;
+      -webkit-overflow-scrolling: touch;
+    }
+    .data-range::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  .data-range.active {
+    transition: 0.3s;
+    display: block;
+    opacity: 0;
+  }
+  .data-range.show {
+    opacity: 1;
+  }
+  .data-range .date {
+    padding: 0 0.13rem;
+    line-height: 0.43rem;
+    font-size: 0.12rem;
+    color: rgba(0,0,0,0.65);
+    border-bottom: 0.01rem solid rgba(0,0,0,0.3);
+  }
+  @media (max-width: 1100px) {
+    .data-range .date {
+      padding: 0.1rem 0.15rem;
+      line-height: 0.54rem;
+      font-size: 0.26rem;
+    }
+  }
+  .data-range .yaer {
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    border-bottom: 0.01rem solid rgba(0,0,0,0.3);
+    position: relative;
+  }
+  @media (max-width: 1100px) {
+    .data-range .yaer {
+      margin-bottom: 0.3rem;
+      padding: 0.1rem 0;
+    }
+  }
+  .data-range .yaer .left-control {
+    left: 0.13rem;
+    top: 0;
+    bottom: 0;
+  }
+  .data-range .yaer .right-control {
+    right: 0.13rem;
+    top: 0;
+    bottom: 0;
+  }
+  .data-range .yaer .left-control,
+  .data-range .yaer .right-control {
+    position: absolute;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+  }
+  .data-range .yaer .left-control .year-previous,
+  .data-range .yaer .right-control .year-previous,
+  .data-range .yaer .left-control .month-previous,
+  .data-range .yaer .right-control .month-previous,
+  .data-range .yaer .left-control .month-next,
+  .data-range .yaer .right-control .month-next,
+  .data-range .yaer .left-control .year-next,
+  .data-range .yaer .right-control .year-next {
+    height: 100%;
+    width: 0.3rem;
+    cursor: pointer;
+    text-align: center;
+    line-height: 0.44rem;
+    background: url("../img/left2.png") center center no-repeat;
+  }
+  .data-range .yaer .left-control .year-previous,
+  .data-range .yaer .right-control .year-previous {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAALCAYAAAE8d1zJAAAABGdBTUEAALGPC/xhBQAAAMxJREFUKBV1kLsOAVEQhhebUFBpXDokIkFLpRDtdgqFZLchofVsHscLiFoiCr5/c2ayJDvJd+afy5kzu1H0Z5nHZ1cSlRCl+EfMcYQaXMHNuvKEDdAVLxxCrxX9qoksiETDzdom8BPTA8QQmrCx5BKh7h7MLFlFaINPwVst9yNOjWvBWhnfF61xT3jDuLgVcW56aw8vuEMdtqDlbuCmhfThuiDTZP1HLf1jHaILyJupcWVBmZ9TOEE3NNgLi7ILlu8jtNo0JBr4HSQQfwFeIhTLSzKGKQAAAABJRU5ErkJggg==);
+  }
+  .data-range .yaer .left-control .month-previous,
+  .data-range .yaer .right-control .month-previous {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAALCAYAAAE1nPyzAAAABGdBTUEAALGPC/xhBQAAAHRJREFUGBljYMAAGRgiESCRLAxhmACKBpzKIhlh6oE0FxDzw/hiQIYxjKMOZMjBOExABgj/hwnAaHEgwxDEwTCUGaYEiQbZFA3EvED8CEkcbBHIwRrIgiA2OxAXAbEWiIMPyAMlQSao4VMEkhMA4mQgtgFxAP9GCHD9CUnKAAAAAElFTkSuQmCC);
+  }
+  .data-range .yaer .left-control .month-next,
+  .data-range .yaer .right-control .month-next {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAALCAYAAAE1nPyzAAAABGdBTUEAALGPC/xhBQAAAIFJREFUGBljYGBgkARiJCAOY8uBGFwwHohWBxGGIIIZRACBMRD/BeKvjCAeFMgCaR4QG2QyigERIFF0kIEuAOJngQgmEIENoGiJRFYBchjILXZA7AzE94D4JxDjBBpAGZBlYN/iVAWU0AbiIiBmR1cEChWQCfLoEjZAgWQgFkCXAACAJAoixbfhKgAAAABJRU5ErkJggg==);
+  }
+  .data-range .yaer .left-control .year-next,
+  .data-range .yaer .right-control .year-next {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAALCAYAAAE8d1zJAAAABGdBTUEAALGPC/xhBQAAANFJREFUKBV9kTsPQUEQRhe3INFpPBIFEoVHdFQK0aHS6KgktP6uWqtQqITzrdnN3oJJzs5r7+zMXOecG0CUnqxKkSMrWXCEfsnOoCajoANpQlvGAjoygiwxqtAFnwif6MIQ7vCEPvgOVLwC/gEFJauvcnvTUalcCJ5jNDFOZh+lNU6Q0Mg7DRzMyZXaWDAkvaulqNU1TOAKWo6WtIUbPOCnzMioqTCndqhnVeCvzMn6aexWHX0B6ZxM8dIXGvhaxzi9pRk04A7KltB/USst86P6AKOyFDc6PCScAAAAAElFTkSuQmCC);
+  }
+  .data-range .yaer .yaer-month {
+    flex: 1;
+    text-align: center;
+    line-height: 0.44rem;
+    font-size: 0.12rem;
+    font-weight: bold;
+    color: rgba(0,0,0,0.85);
+  }
+  @media (max-width: 1100px) {
+    .data-range .yaer .yaer-month {
+      font-size: 0.26rem;
+      line-height: 0.54rem;
+    }
+  }
+  .data-range .container {
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    padding: 0.18rem 0 0.13rem;
+  }
+  @media (max-width: 1100px) {
+    .data-range .container {
+      flex-wrap: wrap;
+      width: 90%;
+      margin: 0 auto;
+      border-left: 0.01rem solid #dedede;
+      border-top: 0.01rem solid #dedede;
+    }
+  }
+  .data-range .container .column {
+    flex: 1 1 50%;
+  }
+  @media (max-width: 1100px) {
+    .data-range .container .column {
+      flex: 0 0 100%;
+    }
+  }
+  .data-range .container .column .week,
+  .data-range .container .column .day .row {
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .data-range .container .column .week span,
+  .data-range .container .column .day .row span {
+    margin: 0 0.06rem;
+    width: 0.26rem;
+    height: 0.26rem;
+    margin-bottom: 0.05rem;
+    font-size: 0.14rem;
+    color: rgba(0,0,0,0.25);
+    line-height: 0.26rem;
+    text-align: center;
+    font-weight: bold;
+  }
+  @media (max-width: 1100px) {
+    .data-range .container .column .week span,
+    .data-range .container .column .day .row span {
+      margin: 0;
+      flex: 1;
+      height: 0.8rem;
+      line-height: 0.8rem;
+      font-size: 0.25rem;
+      border-right: 0.01rem solid #dedede;
+      border-bottom: 0.01rem solid #dedede;
+    }
+  }
+  .data-range .container .column .week span {
+    color: rgba(0,0,0,0.85);
+  }
+  .data-range .container .column .day .row span {
+    font-weight: normal;
+    cursor: no-drop;
+  }
+  .data-range .container .column .day .row span.today.select {
+    box-shadow: 0 0 0 0.01rem #2b6967;
+    border-radius: 0.02rem;
+  }
+  @media (max-width: 1100px) {
+    .data-range .container .column .day .row span.today.select {
+      background: #e6791c;
+      color: #fff;
+      border-radius: 0;
+      box-shadow: none;
+    }
+  }
+  .data-range .container .column .day .row span.select {
+    color: rgba(0,0,0,0.65);
+    cursor: pointer;
+  }
+  .data-range .container .column .day .row span.select.selected {
+    position: relative;
+    background: #e5f2f1;
+  }
+  .data-range .container .column .day .row span.select.selected:after {
+    content: "";
+    position: absolute;
+    right: -0.12rem;
+    width: 0.12rem;
+    top: 0;
+    bottom: 0;
+    background: #e5f2f1;
+    z-index: -1;
+  }
+  @media (max-width: 1100px) {
+    .data-range .container .column .day .row span.select.selected:after {
+      display: none;
+    }
+  }
+  .data-range .container .column .day .row span.select.selected:last-child:after {
+    display: none;
+  }
+  .data-range .container .column .day .row span.active,
+  .data-range .container .column .day .row span.active.today.select {
+    background: #2b6967;
+    color: #fff;
+    border-radius: 0.02rem;
+  }
+  .data-range .container .column .day .row span.active+.selected:before,
+  .data-range .container .column .day .row span.active.today.select+.selected:before {
+    content: "";
+    position: absolute;
+    left: -0.12rem;
+    width: 0.12rem;
+    top: 0;
+    bottom: 0;
+    background: #e5f2f1;
+    z-index: -1;
+  }
+  @media (max-width: 1100px) {
+    .data-range .container .column .day .row span.active+.selected:before,
+    .data-range .container .column .day .row span.active.today.select+.selected:before {
+      display: none;
+    }
+  }
+  .data-range .control-btn {
+    display: none;
+  }
+  @media (max-width: 1100px) {
+    .data-range .control-btn {
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      position: fixed;
+      background: #fff;
+      z-index: 10;
+    }
+    .data-range .date {
+      padding-top: 1.05rem;
+    }
+  }
+  

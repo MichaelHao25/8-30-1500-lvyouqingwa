@@ -1,0 +1,105 @@
+﻿<!doctype html>
+<html>
+
+<head design-width="750">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<title>Demo</title>
+	<link rel="stylesheet" href="css/reset.css" />
+	<!--重置样式-->
+	<link rel="stylesheet" href="css/style.css" />
+	<!--页面样式-->
+	<link rel="stylesheet" href="css/common.css" />
+	<!--常用样式库-->
+	<link rel="stylesheet" href="css/animate.min.css" />
+	<!--CSS3动画库-->
+	<link rel="stylesheet" href="css/data.css">
+	<link rel="stylesheet" href="css/h.css">
+	<script src="js/auto-size.js"></script>
+	<!--设置字体大小-->
+</head>
+
+<body>
+	<div class="mobile-wrap center">
+		<header class="public-header">
+			<div class="control left">
+				<a href="#" class="back"></a>
+			</div>
+			<h1>选择日期</h1>
+			<div class="control right"></div>
+		</header>
+		<main class="main">
+			<div class="date-select-block">
+				<div class="date-select-container">
+					<div class="week">
+						<span class="c-green">日</span>
+						<span>一</span>
+						<span>二</span>
+						<span>三</span>
+						<span>四</span>
+						<span>五</span>
+						<span class="c-green">六</span>
+					</div>
+					<div class="date-container">
+						<div class="arrow-left"></div>
+						<div class="date">2018年10月</div>
+						<div class="arrow-right"></div>
+					</div>
+					<div class="day-container">
+						<div class="row">
+							<div class="day"><span></span></div>
+							<div class="day"><span></span></div>
+							<div class="day"><span></span></div>
+							<div class="day"><span></span></div>
+							<div class="day is-disbled"><span>1</span></div>
+							<div class="day"><span>2</span></div>
+							<div class="day is-select"><span>3</span></div>
+						</div>
+						<div class="row">
+							<div class="day"><span>4</span></div>
+							<div class="day"><span>5</span></div>
+							<div class="day"><span>6</span></div>
+							<div class="day"><span>7</span></div>
+							<div class="day"><span>8</span></div>
+							<div class="day"><span>8</span></div>
+							<div class="day"><span>8</span></div>
+						</div>
+					</div>
+				</div>
+				<div class="p40-0">
+					<form action="?">
+						<input type="hidden" name="date" class="hidden-date">
+						<button href="#" class="button">完成</button>
+					</form>
+				</div>
+				<div class="tips">
+					<h3>注意事项</h3>
+					<p>1.提前两个月才能预约住房。</p>
+					<p>2.浅灰色部分为不可选。</p>
+				</div>
+			</div>
+		</main>
+
+	</div>
+
+	<!--mobile_wrap-->
+
+	<script src="js/jquery-2.2.4.min.js"></script>
+	<!--jQ库-->
+	<script src="js/swiper-4.2.0.min.js"></script>
+	<!--轮播库-->
+	<script src="js/MobEpp-1.1.1.js"></script>
+	<!--封装函数-->
+	<script src="js/data-select.js"></script>
+	<script>
+		$('.date-select-block .button').on('click',function(e) {
+			e.preventDefault()
+			$('.date-select-block .hidden-date').val($('.date-select-container').attr('select_date'))
+		})
+	</script>
+</body>
+
+</html>

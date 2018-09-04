@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+
+<head design-width="750">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>Demo</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <!--重置样式-->
+    <link rel="stylesheet" href="css/style.css" />
+    <!--页面样式-->
+    <link rel="stylesheet" href="css/common.css" />
+    <!--常用样式库-->
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <!--CSS3动画库-->
+    <link rel="stylesheet" href="css/data.css">
+    <link rel="stylesheet" href="css/h.css">
+    <script src="js/auto-size.js"></script>
+    <!--设置字体大小-->
+</head>
+
+<body>
+    <div class="mobile-wrap center">
+        <main class="main">
+            <form action="?">
+                <div class="login-block">
+                    <div class="p220-0-90">
+                        <a href="#" class="brand">
+                            <img src="img/b39071bfcedefb6cf38b5dc4eda1c02b-161+223.png" alt="">
+                        </a>
+                    </div>
+                    <div class="row">
+                        <input type="text" class="input phone-number" placeholder="请输入您的手机号">
+                    </div>
+                    <div class="row df">
+                        <input type="text" class="input code" placeholder="请输入您的验证码">
+                        <div class="send">发送验证码</div>
+                    </div>
+                    <div class="row bdn pt60">
+                        <button class="button login">登陆</button>
+                    </div>
+                </div>
+            </form>
+        </main>
+
+    </div>
+    <!--mobile_wrap-->
+
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <!--jQ库-->
+    <script src="js/swiper-4.2.0.min.js"></script>
+    <!--轮播库-->
+    <script src="js/MobEpp-1.1.1.js"></script>
+    <!--封装函数-->
+    <script src="js/data-select.js"></script>
+    <script>
+        function countDown() {
+            var i = 60,
+                id;
+            $('.login-block .row .send').text(i + 's')
+            id = setInterval(() => {
+                !(--i) && (
+                    clearInterval(id), $('.login-block .row .send').one('click', function () {
+                        $('.login-block .row .send').text(i + 's')
+                        countDown();
+                    })
+                );
+                $('.login-block .row .send').text(i + 's')
+            }, 1000);
+        }
+        $('.login-block .row .send').one('click', function () {
+            countDown();
+        })
+
+        $('.login-block .row .button').on('click',function(e) {
+            e.preventDefault();
+            if(!/^((13[0-9])|(14[5,7])|(15[0-3,5-9])|(17[0,3,5-8])|(18[0-9])|166|198|199|(147))\d{8}$/.test($('.phone-number').val())){
+                alert('请输入正确的手机号！');
+            }
+            
+            
+        })
+        
+
+        
+    </script>
+</body>
+
+</html>
